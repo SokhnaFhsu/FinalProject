@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Kady Events - Your Event Organizer</title>
+<link rel="stylesheet" href="Final.css">
+<script src="Final.js" defer></script>
+
+
+</head>
+
+<header>
+    <header>
+        <div class="header">
+          <a href="#home" class="logo">
+            <img src="LOGO.png" alt="Kady Events Logo" style="height: 90px;">
+          </a>
+          <h1 class="welcome-message">Welcome to Kady Events!</h1>
+          <a href="signin.html" class="button signIn">Sign In</a>
+          <a href="signup.html" class="button signUp">Sign Up</a> 
+        </div>
+  
+
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Services and Pricing</button>
+          <div class="dropdown-content">
+            <a href="service.html#wedding">Wedding</a>
+            <a href="service.html#baby-shower">Baby Shower</a>
+            <a href="service.html#anniversary">Anniversary</a>
+            <a href="service.html#others">Other</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+
+</header>
+
+<div class="container">
+    <!-- Wedding Section -->
+    <section id="wedding" class="event-section">
+        
+        <img src="table.png" alt="Wedding">
+        <div class="event-details">
+            <h2>Wedding</h2>
+            <div class="event-options">
+                <div class="event-option">
+                    <div class="price-circle">$1000</div>
+                    <p>50 People</p>
+                    <button class="reserve">Reserve</button>
+                </div>
+                <div class="event-option">
+                    <div class="price-circle">$1800</div>
+                    <p>100 People</p>
+                    <button class="reserve">Reserve</button>
+                </div>
+                <div class="event-option">
+                    <div class="price-circle">$2500</div>
+                    <p>150 People</p>
+                    <button class="reserve">Reserve</button>
+                </div>
+                <div class="event-option">
+                    <div class="price-circle">$3100</div>
+                    <p>200 People</p>
+                    <button class="reserve">Reserve</button>
+                </div>
+            
+    </section>
+    <!-- Anniversary Section -->
+<section id="anniversary" class="event-section">
+    <img src="birthday.png" alt="Anniversary">
+    <div class="event-details">
+        <h2>Anniversary</h2>
+        <div class="event-options">
+            <div class="event-option">
+                <div class="price-circle">$200</div>
+                <p>10-15 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+            <div class="event-option">
+                <div class="price-circle">$1700</div>
+                <p>16-29 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+            <div class="event-option">
+                <div class="price-circle">$2400</div>
+                <p>30-50People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+            <div class="event-option">
+                <div class="price-circle">$3000</div>
+                <p>200 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+</section>
+
+<!-- Baby Shower Section -->
+<section id="baby-shower" class="event-section">
+    <img src="baby.png" alt="Baby Shower">
+    <div class="event-details">
+        <h2>Baby Shower</h2>
+        <div class="event-options">
+            <div class="event-option">
+                <div class="price-circle">$600</div>
+                <p>30 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+            <div class="event-option">
+                <div class="price-circle">$1100</div>
+                <p>60 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+            <div class="event-option">
+                <div class="price-circle">$1500</div>
+                <p>90 People</p>
+                <button class="reserve">Reserve</button>
+            </div>
+        
+</section>
+
+<!-- Custom Event Form Section -->
+<section id="custom-event" class="event-section">
+    <div class="event-details">
+        <h2>Your Event Choice</h2>
+        <form id="custom-event-form">
+            <input type="text" name="event_name" placeholder="Event Name" required>
+            <input type="number" name="number_of_persons" placeholder="Number of Persons" required>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="confirmation-message" style="display: none;">
+            We will get back to you soon!
+        </div>
+    </div>
+</section>
+
+
+
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Select a Date and Time for Your Event</h2>
+        <div id="calendarPlaceholder">
+            <label for="event-date">Choose a date:</label>
+            <input type="date" id="event-date" name="event-date">
+        </div>
+        <div id="timeSlotContainer">
+            <div class="time-slot-section">
+                <h3>Morning</h3>
+                <div class="time-slot">9:00 AM</div>
+                <div class="time-slot">10:00 AM</div>
+                <div class="time-slot">11:00 AM</div>
+            </div>
+            <div class="time-slot-section">
+                <h3>Afternoon</h3>
+                <div class="time-slot">12:00  PM</div>
+                <div class="time-slot">1:00 PM</div>
+                <div class="time-slot">2:00 PM</div>
+                <div class="time-slot">3:00 PM</div>
+                <div class="time-slot">4:00 PM</div>
+                <div class="time-slot">4:00 PM</div>
+                <div class="time-slot">5:00 PM</div>
+            </div>
+        </div>
+        <button id="confirmBooking">Confirm Booking</button>
+    </div>
+</div>
+
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book Your Event</h2>
+        <form id="booking-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('confirmationModal').style.display='none'">&times;</span>
+        <h2>Thank You for Your Booking!</h2>
+        <p>Your booking number is: <span id="booking-number"></span></p>
+        <p>You will receive an order confirmation email shortly.</p>
+    </div>
+</div>
+
+
+
+
+<footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/page" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/profile" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/profile" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info@kady.com">info@KadyEvent.com</a></p>
+        
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
